@@ -22,7 +22,6 @@ const CourseInput = (props) => {
             return;
         };
 
-        // props.onAddGoal(enteredValue);
         props.onAddGoal(goalValue);
 
         //Clear input field
