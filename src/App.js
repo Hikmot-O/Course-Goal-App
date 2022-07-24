@@ -4,7 +4,6 @@ import CourseGoals from "./components/CourseGoals";
 import "./App.css";
 
 function App() {
-  const GOALS_DUMMY = ["Do all exercises!", "Finish this course!"];
   const GOAL_DUMMY = [
     {id: 'no1', value: "Do all exercises!"},
     {id: 'no2', value: "Finish this course!"},
