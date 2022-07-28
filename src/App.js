@@ -15,7 +15,13 @@ function App() {
     setGOALS((prevGoals) => {
       console.log(newGoal, prevGoals);
       return [newGoal, ...prevGoals];
-    })
+    });
+  }
+
+  const deleteGoalHandler = (id) =>{
+    setGOALS(prevGoals => {
+            return prevGoals.filter(goal => goal.id !== id);
+          });
 
   }
   return (
@@ -24,7 +30,7 @@ function App() {
         <CourseInput onAddGoal={addGoalHandler}></CourseInput>
       </div>
       <div>
-        <CourseGoals goals={GOALS}></CourseGoals>
+        <CourseGoals goals={GOALS} onDeleteGoal={deleteGoalHandler}></CourseGoals>
       </div>
     </div>
   );
